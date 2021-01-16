@@ -1,0 +1,36 @@
+
+  .cursor-pointer {
+    cursor: pointer;
+  }
+
+  .chipLabel{
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: .72rem .75rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    
+  }
+  .no-focus:focus {
+    box-shadow: none !important;
+  }
+  .errorMessage{
+    font-size: 0.75rem;
+    color: #e03131;
+    line-height: 18px;
+}
+.wrap{
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+}
+.focus {
+  border: 1px solid #008DE2;
+  border-radius: 4px;
+}

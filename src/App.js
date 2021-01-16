@@ -8,19 +8,22 @@ import {
   Col
 } from 'react-bootstrap';
 
+import ChipsInput from './ChipsInput';
+
 const App = () => {
   const formControlRef = useRef();
   const [list, setList] = useState([
-    {name:'first'},
-    {name:"second"}
+    { value: 'asdfa'},
+    { value: 'asdfaf'}
   ]);
 
-  const onSubmit = (e) => {
-    console.log(e);
+  const onSubmit = (value) => {
+    debugger;
+
     let newList = [
       ...list,
       {
-        name:e
+        value
       }
     ];
     setList(newList)
@@ -29,13 +32,15 @@ const App = () => {
 
   const removeEl = (index) => {
     let newList = [...list];
-    newList.splice(index,1);
+    newList.splice(index,1); //slice  //splice  // map forEach
     setList(newList);
   }
   
   return (
     <div className="App">
-      <label htmlFor="basic-url">Deposited Plan</label>
+       <label htmlFor="basic-url">Deposited Plan</label>
+      <ChipsInput label='DP' name={'sdfasd'} placeholder={'planNumber'} chips={list} onSubmit={onSubmit} onRemove={removeEl} />
+      {/* <label htmlFor="basic-url">Deposited Plan</label>
       <InputGroup className="mb-3">
       <InputGroup.Prepend>
         <InputGroup.Text id="basic-addon3">
@@ -65,7 +70,7 @@ const App = () => {
           />
         </Form>
       </Col>
-    </InputGroup>
+    </InputGroup> */}
     </div>
   );
 }
