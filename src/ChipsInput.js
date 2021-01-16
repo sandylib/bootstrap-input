@@ -12,7 +12,7 @@ const Error = ({error}) => (<Row>
 
 
 const ChipsInput = ({name, label, placeholder, classes, chips, onRemove, onSubmit, error}) => {
-    debugger;
+ 
     const formControlRef = useRef();
     const [exitingIndex, setExitingIndex] = useState(-1);
     const [focus, setFocus] = useState(false);
